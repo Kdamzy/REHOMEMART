@@ -1,19 +1,17 @@
-
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-const process = require('process');
 const basename = path.basename(__filename);
-const config = require("../config/config")
+const config = require('../config/config'); // Correct path to config file
 const db = {};
 
-console.log(config);
+console.log(config); // Debugging output to ensure config is read
 
-const sequelize = new Sequelize(config.db.database, config.db.username, config.db.password, {
-   dialect:"mysql",
-   host:config.db.host
+const sequelize = new Sequelize(config.database, config.username, config.password, {
+  dialect: config.dialect,
+  host: config.host
 });
 
 fs
@@ -43,11 +41,10 @@ db.Sequelize = Sequelize;
 sequelize
   .authenticate()
   .then(() => {
-     console.log('Connection has been established successfully.');
+    console.log('Connection has been established successfully.');
   })
   .catch(err => {
-      console.error('Unable to connect to the database:', err);
+    console.error('Unable to connect to the database:', err);
   });
-
 
 module.exports = db;

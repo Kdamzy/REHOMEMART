@@ -3,12 +3,12 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class BookingGuest extends Model {
+  class orderguest extends Model {
     static associate(models) {
       // define guest that place order
     }
   }
-  BookingGuest.init({
+  orderguest.init({
     num_guests: DataTypes.INTEGER
   }, {
     sequelize,
