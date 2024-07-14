@@ -127,6 +127,11 @@ body {
     left: 20px;
 }
 
+#mobile {
+    display: none;
+    align-items: center;
+}
+
 /* Home page */
 #hero {
     background-image: url("img/home.png");
@@ -481,15 +486,119 @@ footer .install img {
 @media (max-width:799px) {
     #navbar {
         display: flex;
-         flex-direction: column;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
         top: 0;
-        right: 0px;
+        left: 500px;
         height: 100vh;
         width: 300px;
         border-color: #E3E6F3;
         box-shadow: 0 40px 60px rgb(0, 0, 0, 0.01);
+        padding: 80px 0 0 10px;
     }
+
+    #navbar.active {
+        right: 0px;
+    }
+    
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24;
+        padding-left: 20px;
+    }
+}
+
+/* Shop page */
+#page-header {
+    background-image: url("img/banner/b10.jpg");
+    width: 100%;
+    height: 45vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;   
+}
+
+#page-header h2,
+#page-header p {
+    color: plum;
+}
+
+#pagniation {
+    text-align: center;
+}
+
+#pagniation a {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#pagniation a img {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* item page */
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .main-img {
+    width: 40%;
+    margin-right: 50px;
+}
+.small-img-grp {
+    display: flex;
+    justify-content: center;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single_prodetails {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .single_prodetails h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single_prodetails h2 {
+    font-size: 26px;
+}
+
+#prodetails .single_prodetails select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single_prodetails button {
+    background: #088178;
+    color: #fff;
+}
+
+#prodetails .single_prodetails span {
+    line-height: 25px;
 }
