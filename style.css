@@ -602,3 +602,22 @@ footer .install img {
 #prodetails .single_prodetails span {
     line-height: 25px;
 }
+
+/* About page */
+#page-header.about-header{
+    background-image: url("img/banner.png");  
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+#about-head div{
+    padding-left: 40px;
+}
